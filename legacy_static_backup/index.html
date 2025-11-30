@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Automation Intelligence Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="branding">
+          <span class="logo-glow"></span>
+          <span class="logo-text">VAIP</span>
+        </div>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#war-room">War Room</a>
+          <a href="#credibility">Credibility</a>
+          <a href="#why-vaip">Why VAIP</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#modules">Modules</a>
+          <a href="#automation">Automation</a>
+          <a href="#developer">Developers</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="cta-button">Book Intelligence Demo</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="war-room" class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-badge">Gen-Next CPaaS · CCaaS Intelligence</div>
+            <p class="tagline">2 Crore Calls. Real-Time Intelligence. Autonomous Operations.</p>
+            <h1>We run millions of conversations.<br />You command the outcomes.</h1>
+            <p class="subtitle">
+              Voice Automation Intelligence Platform (VAIP) unifies CPaaS, CCaaS, and AI voice automation into a
+              zero-ops command center for enterprise scale.
+            </p>
+            <div class="hero-highlights" role="list">
+              <div class="hero-highlight" role="listitem">
+                <span class="hero-label">Autonomy Index</span>
+                <strong>94%</strong>
+              </div>
+              <div class="hero-highlight" role="listitem">
+                <span class="hero-label">AI Negotiations Closed</span>
+                <strong>1.3M+</strong>
+              </div>
+              <div class="hero-highlight" role="listitem">
+                <span class="hero-label">Global Voice Twin Studio</span>
+                <strong>48 languages</strong>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button class="cta-button">Launch War Room</button>
+              <button class="secondary-button">Download Product Deck</button>
+            </div>
+          </div>
+          <div class="hero-dashboard" role="presentation">
+            <div class="dashboard-card">
+              <h3>Live Network Pulse</h3>
+              <canvas id="networkCanvas" width="360" height="200" aria-hidden="true"></canvas>
+              <div class="chip-strip">
+                <span class="status-chip">Latency &lt; 240ms</span>
+                <span class="status-chip">SLA 99.99%</span>
+                <span class="status-chip">Failover Active</span>
+              </div>
+            </div>
+            <div class="stats-grid" role="list">
+              <article class="stat-card" role="listitem">
+                <span class="label">Calls Running Now</span>
+                <span class="value" data-metric="calls">0</span>
+                <span class="trend positive" data-trend="calls">+12% vs last hour</span>
+              </article>
+              <article class="stat-card" role="listitem">
+                <span class="label">AI Conversations Active</span>
+                <span class="value" data-metric="ai">0</span>
+                <span class="trend positive">Avg AHT 72s</span>
+              </article>
+              <article class="stat-card" role="listitem">
+                <span class="label">Revenue Generated Today</span>
+                <span class="value" data-metric="revenue">₹0</span>
+                <span class="trend" data-trend="revenue">ROI +32%</span>
+              </article>
+              <article class="stat-card" role="listitem">
+                <span class="label">Conversion Rate</span>
+                <span class="value" data-metric="conversion">0%</span>
+                <span class="trend positive" data-trend="conversion">Forecast +9%</span>
+              </article>
+              <article class="stat-card" role="listitem">
+                <span class="label">Answer vs Failed</span>
+                <span class="value" data-metric="answer">0%</span>
+                <span class="trend">Carrier health: Optimal</span>
+              </article>
+              <article class="stat-card" role="listitem">
+                <span class="label">Risk Alerts</span>
+                <span class="value" data-metric="risk">0</span>
+                <span class="trend neutral" data-trend="risk">Realtime Guardrails</span>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="globe" role="presentation">
+          <canvas id="globeCanvas" width="420" height="420" aria-hidden="true"></canvas>
+        </div>
+      </section>
+
+      <section id="credibility" class="section micro-section">
+        <div class="container credibility-grid">
+          <div class="credibility-copy">
+            <p class="eyebrow">Trusted by leaders</p>
+            <h2>Mission-critical teams rely on VAIP for accountable voice automation</h2>
+            <p class="description">
+              Digital-first banks, fintech unicorns, and telecom majors deploy VAIP for conversational revenue,
+              regulatory resilience, and 24/7 AI command operations.
+            </p>
+          </div>
+          <div class="credibility-logos" role="list">
+            <span class="logo-chip" role="listitem">NovaBank</span>
+            <span class="logo-chip" role="listitem">QuantaPay</span>
+            <span class="logo-chip" role="listitem">Finova Grid</span>
+            <span class="logo-chip" role="listitem">OrbitTel</span>
+            <span class="logo-chip" role="listitem">ZenPay</span>
+            <span class="logo-chip" role="listitem">AxisEdge</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-vaip" class="section alt-bg">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Why VAIP</p>
+            <h2>Future-grade orchestration built for leadership, product, and ops in one pane</h2>
+            <p class="description">
+              Move from call centers to intelligence centers. VAIP fuses strategic observability with autonomous AI
+              actions so teams plan, launch, and optimise without waiting on human escalations.
+            </p>
+          </header>
+          <div class="why-grid">
+            <article class="why-card">
+              <h3>Command-Ready Intelligence</h3>
+              <p>Leadership dashboards with explainable AI, predictive forecasts, and narrative insights on-demand.</p>
+              <ul>
+                <li>Conversational analytics with drilldowns</li>
+                <li>Executive briefings auto-summarised</li>
+                <li>Voice Ops Copilot for instant answers</li>
+              </ul>
+            </article>
+            <article class="why-card">
+              <h3>Enterprise-Grade Trust</h3>
+              <p>Zero trust security layers, compliance automation, and adaptive governance prevent revenue leakage.</p>
+              <ul>
+                <li>Geo-fenced deployments &amp; audit trails</li>
+                <li>Consent, PII masking, and SLA guardrails</li>
+                <li>Carrier intelligence with auto reroute</li>
+              </ul>
+            </article>
+            <article class="why-card">
+              <h3>Builder Velocity</h3>
+              <p>Developers ship faster with prebuilt templates, LLM flows, and realtime feedback loops.</p>
+              <ul>
+                <li>Drag-drop flows + low-code actions</li>
+                <li>SDKs, simulators, and load labs</li>
+                <li>Composable API primitives</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="section">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Platform Core</p>
+            <h2>Dialer, AI, and Orchestration unified in one command platform</h2>
+            <p class="description">
+              Build, deploy, and scale multi-million CPS voice operations with adaptive intelligence, real-time controls,
+              and geo-resilient infrastructure.
+            </p>
+          </header>
+          <div class="capabilities-grid">
+            <article class="capability-card">
+              <h3>Dialer Technology</h3>
+              <ul>
+                <li>FreeSWITCH / Asterisk Core</li>
+                <li>Kamailio SIP routing mesh</li>
+                <li>Adaptive CPS throttling up to 16,000</li>
+                <li>Geo-aware routing &amp; failover trunks</li>
+                <li>Bot-native call orchestration</li>
+              </ul>
+            </article>
+            <article class="capability-card">
+              <h3>AI Conversation Stack</h3>
+              <ul>
+                <li>Multilingual ASR + Neural TTS</li>
+                <li>Custom LLM workflow stack</li>
+                <li>Intent recognition &amp; context carryover</li>
+                <li>Emotion &amp; silence detection</li>
+                <li>Negotiation &amp; compliance engine</li>
+              </ul>
+            </article>
+            <article class="capability-card">
+              <h3>Orchestration Layer</h3>
+              <ul>
+                <li>Realtime load balancing &amp; retries</li>
+                <li>Intent-led routing &amp; auto escalation</li>
+                <li>Queue optimization &amp; bandwidth AI</li>
+                <li>Self-healing Ops &amp; auto reporting</li>
+                <li>Leadership insights in one screen</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="modules" class="section alt-bg">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Core Product Modules</p>
+            <h2>12 modules engineered for autonomous voice operations</h2>
+            <p class="description">
+              A full-stack platform that takes campaigns from data ingestion to intelligent voice automation, analytics,
+              and leadership-grade visibility.
+            </p>
+          </header>
+          <div class="module-grid">
+            <article class="module-card">
+              <h3>Smart Dialer System</h3>
+              <p>Outbound + inbound engines with CPS control, geo routing, failover, and live KPIs.</p>
+              <ul>
+                <li>CPS 10 → 16,000 scaling</li>
+                <li>Parallel dialing &amp; retry automation</li>
+                <li>Carrier performance index</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>AI Conversation Engine</h3>
+              <p>State machines + LLM intelligence deliver contextual, compliant conversations every time.</p>
+              <ul>
+                <li>Memory architecture with context</li>
+                <li>Emotion &amp; sentiment detection</li>
+                <li>Audit-ready compliance logs</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Campaign Management</h3>
+              <p>Automated lifecycle from data ingest to reports with drag &amp; drop orchestration.</p>
+              <ul>
+                <li>CRM / SFTP / API ingestion</li>
+                <li>Priority scoring &amp; time bands</li>
+                <li>TTS personalization per cohort</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Leadership War Room</h3>
+              <p>Command center with conversion funnels, ROI intelligence, and drill-down diagnostics.</p>
+              <ul>
+                <li>Client → call drill paths</li>
+                <li>Predictive conversion insights</li>
+                <li>Live risk alerts</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Advanced Analytics</h3>
+              <p>Sankey flows, heatmaps, tone timelines, and revenue attribution for every signal.</p>
+              <ul>
+                <li>User → infrastructure insights</li>
+                <li>Word clouds &amp; geo maps</li>
+                <li>Optimal window recommendations</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Automation Layer</h3>
+              <p>No-ops future where campaigns auto start, scale, heal, and report across the stack.</p>
+              <ul>
+                <li>Self-healing workflows</li>
+                <li>AI Ops Bot with natural language</li>
+                <li>Incident detection &amp; fixes</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Security &amp; Compliance</h3>
+              <p>Zero-trust session control with global regulatory alignment and dynamic masking.</p>
+              <ul>
+                <li>RBI, TRAI, GDPR ready</li>
+                <li>Geo fencing &amp; consent capture</li>
+                <li>Tokenized authentication</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Developer Platform</h3>
+              <p>API-first platform with SDKs, sandbox, and load testing lab for rapid integration.</p>
+              <ul>
+                <li>REST + Webhooks</li>
+                <li>Dial, ASR, TTS, analytics APIs</li>
+                <li>Node / Python / Java SDKs</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>CRM Integration Engine</h3>
+              <p>Two-way sync with leading CRMs, custom stacks, and data lakes in near real-time.</p>
+              <ul>
+                <li>Salesforce, Zoho, Freshsales</li>
+                <li>SFTP &amp; webhook automation</li>
+                <li>Outcome + recording sync</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>User Level Intelligence</h3>
+              <p>360° profiles detailing intent history, ROI impact, and payment probability.</p>
+              <ul>
+                <li>Behaviour &amp; response timeline</li>
+                <li>Voice response scoring</li>
+                <li>Revenue influence</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Reporting Engine</h3>
+              <p>Auto-generated reports, alerts, and exports triggered by thresholds and schedules.</p>
+              <ul>
+                <li>PDF, Excel, WhatsApp export</li>
+                <li>Auto daily / weekly scheduling</li>
+                <li>Carrier quality diagnostics</li>
+              </ul>
+            </article>
+            <article class="module-card">
+              <h3>Enterprise Deployment</h3>
+              <p>Cloud, hybrid, and on-prem options with microservices, Kubernetes, and edge nodes.</p>
+              <ul>
+                <li>Kafka / RabbitMQ backbone</li>
+                <li>Dedicated edge orchestration</li>
+                <li>Zero data loss architecture</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="warroom-detail">
+        <div class="container dashboard-grid">
+          <div class="dashboard-preview">
+            <h2>AI Command Center: Leadership WAR ROOM Dashboard</h2>
+            <p>
+              Monitor live calls, track ROI per campaign, and interrogate performance with a conversational AI co-pilot.
+              The dashboard visualizes workloads across clients, predicts conversion windows, and surfaces risk alerts
+              before they impact revenue.
+            </p>
+            <div class="chat-demo" role="log" aria-live="polite">
+              <div class="chat-entry user">“Why did Campaign X conversion drop today?”</div>
+              <div class="chat-entry bot">
+                <p>Drop driven by spike in silence duration on Hindi calls.</p>
+                <ul>
+                  <li>Action: Increase ASR confidence threshold</li>
+                  <li>Recommendation: Boost CPS for English cluster</li>
+                </ul>
+              </div>
+              <div class="chat-entry user">“Which client is leaking revenue?”</div>
+              <div class="chat-entry bot">
+                <p>Client NovaBank experiencing 12% drop. Suggest retarget with empathy script v4.</p>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-widgets">
+            <div class="widget-row">
+              <div class="widget-card">
+                <h4>Conversion Forecast</h4>
+                <div class="sparkline" data-chart="forecast"></div>
+                <p class="widget-stat">+9.4% projected vs yesterday</p>
+              </div>
+              <div class="widget-card">
+                <h4>Optimal Calling Windows</h4>
+                <ul class="dot-list">
+                  <li>08:00 - 10:30 → 1.3x connects</li>
+                  <li>14:00 - 16:00 → 1.7x conversions</li>
+                  <li>19:00 - 21:30 → 0.8x risk alerts</li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-row">
+              <div class="widget-card">
+                <h4>Client Load Distribution</h4>
+                <div class="radial-chart" data-chart="clients"></div>
+                <p class="widget-stat">NovaBank · 32% | QuantaPay · 27% | Finova · 19%</p>
+              </div>
+              <div class="widget-card">
+                <h4>Risk Pulse</h4>
+                <p class="risk-score">0.02</p>
+                <p class="widget-stat">AI guardrails neutralizing 97% incidents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="automation" class="section alt-bg">
+        <div class="container automation-grid">
+          <div>
+            <header class="section-header align-left">
+              <p class="eyebrow">Automation Layer</p>
+              <h2>No Ops Future: Campaigns that plan, execute, and optimize themselves</h2>
+              <p class="description">
+                AI agents scale CPS, monitor quality, trigger incident management, and deliver action-ready reports.
+                Leadership simply asks the AI Command Center for outcomes.
+              </p>
+            </header>
+            <ul class="feature-list">
+              <li>Campaign auto-start from scoring intelligence</li>
+              <li>Self-healing carrier + ASR routing</li>
+              <li>AI Ops bot answering leadership queries</li>
+              <li>Behavioural segmentation &amp; customer voice twins</li>
+              <li>Fraud &amp; abuse detection with escalation AI</li>
+            </ul>
+          </div>
+          <div class="automation-visual" role="presentation">
+            <div class="automation-node" data-state="active">Campaign Trigger</div>
+            <div class="automation-node" data-state="processing">CPS Scaling</div>
+            <div class="automation-node" data-state="processing">Quality Monitor</div>
+            <div class="automation-node" data-state="alert">Risk Guardian</div>
+            <div class="automation-node" data-state="success">Auto Report</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="developer" class="section">
+        <div class="container developer-grid">
+          <div>
+            <header class="section-header align-left">
+              <p class="eyebrow">Developer Platform</p>
+              <h2>Integrate in minutes. Scale to billions of calls.</h2>
+              <p class="description">
+                SDKs, REST APIs, and webhooks power custom experiences, while sandbox and load testing tools keep
+                experiments safe.
+              </p>
+            </header>
+            <div class="sdk-tabs" role="tablist">
+              <button role="tab" aria-selected="true" data-sdk="node">Node.js SDK</b

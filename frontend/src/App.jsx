@@ -72,7 +72,6 @@ function App() {
           hero={enterpriseHero}
           positioning={enterprisePositioning}
           proof={enterpriseProof}
-          services={enterpriseServices}
           industries={enterpriseIndustries}
           trust={enterpriseTrust}
           onNavigate={handleNavigate}

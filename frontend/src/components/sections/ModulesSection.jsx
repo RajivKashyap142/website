@@ -7,7 +7,7 @@ export default function ModulesSection({ modules }) {
         <SectionHeader
           eyebrow="Platform Highlight Sections"
           title="From dialer infrastructure to AI orchestration and leadership war rooms"
-          description="Explore the Shrava platform components that automate conversations, scale infinitely, integrate seamlessly, and report revenue outcomes in real time."
+          description="Explore the Shravo platform components that automate conversations, scale infinitely, integrate seamlessly, and report revenue outcomes in real time."
         />
         <div className="module-grid">
           {modules.map((module) => (

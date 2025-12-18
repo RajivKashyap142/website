@@ -9,9 +9,9 @@ export const enterpriseHero = {
   subheadline:
     'We design and build complete, production-grade voice automation platforms — dialer, orchestration, AI integration, analytics, and leadership dashboards — capable of running 2 Crore+ calls per day.',
   ctas: [
-    { label: '✅ Build With Us', target: 'contact' },
-    { label: '✅ Book Technical Call', target: 'contact' },
-    { label: '✅ View Capabilities', target: 'enterprise-services' }
+    { label: 'Build With Us', target: 'contact' },
+    { label: 'Book Technical Call', target: 'contact' },
+    { label: 'View Capabilities', target: 'enterprise-services' }
   ]
 };
 
@@ -34,12 +34,12 @@ export const enterpriseProof = {
   eyebrow: 'Proof of Scale',
   title: 'Proven Capability',
   checks: [
-    '✅ Successfully powered 2 Crore calls/day architecture',
-    '✅ Multi-carrier routing experience',
-    '✅ Real-time analytics for leadership',
-    '✅ Auto-scaling dialer frameworks',
-    '✅ CRM & SFTP operational systems',
-    '✅ Bot-first design systems'
+    'Successfully powered 2 Crore calls/day architecture',
+    'Multi-carrier routing experience',
+    'Real-time analytics for leadership',
+    'Auto-scaling dialer frameworks',
+    'CRM & SFTP operational systems',
+    'Bot-first design systems'
   ],
   statements: [
     "We build systems that don't break under load",
@@ -99,13 +99,13 @@ export const enterpriseIndustries = {
 export const enterpriseTrust = {
   title: 'Why Enterprises Choose Us',
   points: [
-    '✅ 100% system ownership',
-    '✅ No black box',
-    '✅ Deep SIP knowledge',
-    '✅ AI inside telecom',
-    '✅ Automation-first architecture',
-    '✅ Full vertical build',
-    '✅ Transparent delivery'
+    '100% system ownership',
+    'No black box',
+    'Deep SIP knowledge',
+    'AI inside telecom',
+    'Automation-first architecture',
+    'Full vertical build',
+    'Transparent delivery'
   ]
 };
 
@@ -114,9 +114,9 @@ export const investorHero = {
   subheadline:
     "We are transitioning from a service engineering team to a full IP-led voice automation company — building India's next enterprise-grade AI Voice Platform.",
   ctas: [
-    { label: '✅ Partner With Us', target: 'investor-cta' },
-    { label: '✅ See Vision Deck', target: 'investor-vision' },
-    { label: '✅ Investor Meeting', target: 'investor-cta' }
+    { label: 'Partner With Us', target: 'investor-cta' },
+    { label: 'See Vision Deck', target: 'investor-vision' },
+    { label: 'Investor Meeting', target: 'investor-cta' }
   ]
 };
 
@@ -142,25 +142,25 @@ export const investorProblem = {
 export const investorSolution = {
   title: 'Our Platform Will Deliver',
   bullets: [
-    '✅ End-to-end AI voice automation',
-    '✅ Dialer + AI + Analytics',
-    '✅ Full campaign control',
-    '✅ AI led orchestration',
-    '✅ Leadership dashboards',
-    '✅ Predictive analytics',
-    '✅ Autonomous operations'
+    'End-to-end AI voice automation',
+    'Dialer + AI + Analytics',
+    'Full campaign control',
+    'AI led orchestration',
+    'Leadership dashboards',
+    'Predictive analytics',
+    'Autonomous operations'
   ]
 };
 
 export const investorMoat = {
   title: 'Why We Win',
   bullets: [
-    '✅ Already proven at 2CR scale',
-    '✅ Product built from battlefield engineering',
-    '✅ Not theory — production-tested',
-    '✅ Telecom + AI combined',
-    '✅ Infra + Application in one platform',
-    '✅ Minimal vendor dependency'
+    'Already proven at 2CR scale',
+    'Product built from battlefield engineering',
+    'Not theory — production-tested',
+    'Telecom + AI combined',
+    'Infra + Application in one platform',
+    'Minimal vendor dependency'
   ]
 };
 
@@ -217,9 +217,9 @@ export const investorRoadmap = [
 export const investorCta = {
   title: "Let's Build the Company That Owns Voice Technology.",
   items: [
-    { label: '📩 Email', value: 'partnerships@yourcompany.com', href: 'mailto:partnerships@yourcompany.com' },
-    { label: '📞 Investor Line', value: '+91 XXXXXXXXXX', href: 'tel:+91XXXXXXXXXX' },
-    { label: '📅 Book Investor Call', value: 'Schedule a meeting', href: '#contact' }
+    { label: 'EMAIL', value: 'hello@shravo.com', href: 'mailto:hello@shravo.com' },
+    { label: 'INVESTOR LINE', value: '+91 XXXXXXXXXX', href: 'tel:+91XXXXXXXXXX' },
+    { label: 'BOOK INVESTOR CALL', value: 'Schedule a meeting', href: '#contact' }
   ],
   extras: [
     'Investor trust indicators: Team LinkedIn',
@@ -233,10 +233,10 @@ export const investorCta = {
 };
 
 export const contactHighlights = [
-  '📩 partnerships@yourcompany.com',
-  '📞 +91 XXXXXXXXXX',
-  '📅 Book a technical call',
-  '🤝 Strategic investor partnerships'
+  'hello@shravo.com',
+  '+91 XXXXXXXXXX',
+  'Book a technical call',
+  'Strategic investor partnerships'
 ];
 
 export const footerColumns = [
@@ -263,7 +263,7 @@ export const footerColumns = [
     links: [
       { label: 'Contact', href: '#contact' },
       { label: 'Investor Call', href: '#investor-cta' },
-      { label: 'Email', href: 'mailto:partnerships@yourcompany.com' }
+      { label: 'Email', href: 'mailto:hello@shravo.com' }
     ]
   }
 ];

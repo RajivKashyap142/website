@@ -1,9 +1,7 @@
 import SectionHeader from '../SectionHeader';
+import OrchestrationDiagram from '../visuals/OrchestrationDiagram';
 
-export default function EnterpriseSection({ hero, positioning, proof, services, industries, trust, onNavigate }) {
-  const primaryServices = services.slice(0, 4);
-  const secondaryServices = services.slice(4);
-
+export default function EnterpriseSection({ hero, positioning, proof, industries, trust, onNavigate }) {
   return (
     <section id="enterprise" className="section enterprise-section">
       <div className="container enterprise-grid">
@@ -21,6 +19,16 @@ export default function EnterpriseSection({ hero, positioning, proof, services, 
           <h2>{hero.headline}</h2>
           <p className="positioning-footer">{positioning.footer}</p>
         </div>
+      </div>
+
+      <div className="container enterprise-services" id="enterprise-services">
+        <SectionHeader
+          eyebrow="What We Build For Clients"
+          title="Engineering pods that deliver end-to-end voice infrastructure"
+          description="From dialer cores to leadership war rooms, we build the systems that run your revenue engines."
+          align="left"
+        />
+        <OrchestrationDiagram onLaunch={() => onNavigate('contact')} />
       </div>
 
       <div className="container enterprise-pillars" id="enterprise-pillars">
@@ -47,7 +55,7 @@ export default function EnterpriseSection({ hero, positioning, proof, services, 
             {proof.checks.map((check) => (
               <span key={check} className="check-item">
                 <span className="check-icon" aria-hidden="true">✓</span>
-                <span className="check-text">{check.replace('✅ ', '')}</span>
+                <span className="check-text">{check}</span>
               </span>
             ))}
           </div>
@@ -60,43 +68,6 @@ export default function EnterpriseSection({ hero, positioning, proof, services, 
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="container enterprise-services" id="enterprise-services">
-        <SectionHeader
-          eyebrow="What We Build For Clients"
-          title="Engineering pods that deliver end-to-end voice infrastructure"
-          description="From dialer cores to leadership war rooms, we build the systems that run your revenue engines."
-          align="left"
-        />
-        <div className="service-grid service-grid--primary">
-          {primaryServices.map((service) => (
-            <article key={service.id} className="service-card">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <ul>
-                {service.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-        {secondaryServices.length > 0 && (
-          <div className="service-grid service-grid--secondary">
-            {secondaryServices.map((service) => (
-              <article key={service.id} className="service-card">
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul>
-                  {service.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        )}
       </div>
 
       <div className="container enterprise-industries" id="enterprise-industries">

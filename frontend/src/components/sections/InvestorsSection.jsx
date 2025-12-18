@@ -7,8 +7,8 @@ export default function InvestorsSection({ highlights, cards }) {
         <div>
           <SectionHeader
             eyebrow="Investor Update"
-            title="Scaling Shrava with strategic capital"
-            description="Shrava transforms enterprise voice operations with AI-driven CPaaS/CCaaS delivery. We are raising Pre-Series A capital to accelerate delivery pods, compliance tooling, and go-to-market partnerships."
+            title="Scaling Shravo with strategic capital"
+            description="Shravo transforms enterprise voice operations with AI-driven CPaaS/CCaaS delivery. We are raising Pre-Series A capital to accelerate delivery pods, compliance tooling, and go-to-market partnerships."
             align="left"
           />
           <div className="investor-highlights" role="list">

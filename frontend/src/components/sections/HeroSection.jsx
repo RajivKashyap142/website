@@ -30,7 +30,7 @@ export default function HeroSection({ metrics, metricsBase, highlights, onNaviga
     {
       label: 'Calls / Minute',
       value: callsPerMinute.toLocaleString('en-IN'),
-      meta: 'Across Shrava delivery pods'
+      meta: 'Across Shravo delivery pods'
     },
     {
       label: 'Revenue Generated Today',
@@ -56,7 +56,7 @@ export default function HeroSection({ metrics, metricsBase, highlights, onNaviga
             See intelligence in real time.
           </h1>
           <p className="subtitle">
-            Shrava powers 2 Crore+ calls every day with ultra-scalable dialer infrastructure, AI-led orchestration, and
+            Shravo powers 2 Crore+ calls every day with ultra-scalable dialer infrastructure, AI-led orchestration, and
             autonomous command centres. Deploy, observe, and optimise voice revenue engines with live analytics and zero downtime.
           </p>
           <div className="hero-highlights" role="list">

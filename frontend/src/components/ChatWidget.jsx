@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-const SYSTEM_PROMPT = `You are Shrava's customer success copilot. Provide helpful, clear answers about Shrava's voice automation services, delivery capabilities, pricing models, compliance, and rollout timelines. When appropriate, offer to connect them with the Shrava team for deeper discussions.`;
+const SYSTEM_PROMPT = `You are Shravo's customer success copilot. Provide helpful, clear answers about Shravo's voice automation services, delivery capabilities, pricing models, compliance, and rollout timelines. When appropriate, offer to connect them with the Shravo team for deeper discussions.`;
 
 const INITIAL_MESSAGES = [
   {
     role: 'assistant',
     content:
-      'Hi there! I’m Shrava’s customer success copilot. Ask me about deliveries, pricing, compliance or how we can launch voice automation for your organisation.',
+      'Hi there! I’m Shravo’s customer success copilot. Ask me about deliveries, pricing, compliance or how we can launch voice automation for your organisation.',
     timestamp: new Date()
   }
 ];
@@ -38,7 +38,6 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState(INITIAL_MESSAGES);
   const [input, setInput] = useState('');
   const [isSending, setIsSending] = useState(false);
-  const [error, setError] = useState(null);
   const listRef = useRef(null);
 
   const canSend = input.trim().length > 0 && !isSending;
@@ -68,75 +67,22 @@ export default function ChatWidget() {
     const prompt = input.trim();
     if (!prompt || isSending) return;
 
-    setError(null);
     const outgoing = { role: 'user', content: prompt, timestamp: new Date() };
     setMessages((prev) => [...prev, outgoing]);
     setInput('');
     setIsSending(true);
 
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...historyPayload, prompt })
-      });
+    // Simulate a brief delay for better UX
+    await new Promise(resolve => setTimeout(resolve, 800));
 
-      if (!response.ok) {
-        throw new Error(`Server returned ${response.status}`);
-      }
-
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-      let assistantOutput = '';
-
-      if (reader) {
-        const streamingMessage = {
-          role: 'assistant',
-          content: '',
-          timestamp: new Date(),
-          streaming: true
-        };
-        setMessages((prev) => [...prev, streamingMessage]);
-
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          assistantOutput += decoder.decode(value, { stream: true });
-          setMessages((prev) => {
-            const next = [...prev];
-            const last = next[next.length - 1];
-            if (last?.streaming) {
-              next[next.length - 1] = { ...last, content: assistantOutput };
-            }
-            return next;
-          });
-        }
-
-        setMessages((prev) => {
-          const next = [...prev];
-          const last = next[next.length - 1];
-          if (last?.streaming) {
-            next[next.length - 1] = {
-              ...last,
-              streaming: false,
-              timestamp: new Date(),
-              content: assistantOutput || 'Happy to help with anything else you need.'
-            };
-          }
-          return next;
-        });
-      } else {
-        const result = await response.json();
-        const finalMessage = result.reply ?? 'Happy to help with anything else you need.';
-        setMessages((prev) => [...prev, { role: 'assistant', content: finalMessage, timestamp: new Date() }]);
-      }
-    } catch (err) {
-      console.error(err);
-      setError('Could not reach Shrava support right now. Please try again.');
-      setMessages((prev) => prev.filter((msg) => !msg.streaming));
-    } finally {
-      setIsSending(false);
-    }
+    // Always show the fallback message since there's no backend
+    const errorMessage = {
+      role: 'assistant',
+      content: 'Our server is down. Please send us your query on hello@shravo.com',
+      timestamp: new Date()
+    };
+    setMessages((prev) => [...prev, errorMessage]);
+    setIsSending(false);
   };
 
   return (
@@ -149,24 +95,26 @@ export default function ChatWidget() {
           setTimeout(scrollToBottom, 150);
         }}
         aria-expanded={isOpen}
-        aria-controls="shrava-chat-panel"
+        aria-controls="Shravo-chat-panel"
       >
         <span className="launcher-icon">💬</span>
-        <span className="launcher-text">Chat with Shrava</span>
+        <span className="launcher-text">Chat with Shravo</span>
       </button>
 
-      <div className="chat-panel" id="shrava-chat-panel" role="dialog" aria-label="Shrava customer success chat">
+      <div className="chat-panel" id="Shravo-chat-panel" role="dialog" aria-label="Shravo customer success chat">
         <header className="chat-header">
-          <div>
-            <h3>Shrava Customer Success</h3>
-            <p>Ask us about delivery pods, compliance, pricing, or funding partnerships.</p>
+          <div className="chat-header-bar">
+            <div className="chat-header-body">
+              <h3>Shravo Customer Success</h3>
+              <p>Ask us about delivery pods, compliance, pricing, or funding partnerships.</p>
+            </div>
+            <div className="chat-controls">
+              <button type="button" className="chat-control chat-control--close" onClick={() => setIsOpen(false)} aria-label="Close chat">
+                ×
+              </button>
+            </div>
           </div>
-          <button type="button" className="chat-close" onClick={() => setIsOpen(false)} aria-label="Close chat">
-            ×
-          </button>
         </header>
-
-        {error && <div className="chat-error" role="alert">{error}</div>}
 
         <div className="chat-body" ref={listRef}>
           {messages.map((message, index) => (
@@ -182,25 +130,27 @@ export default function ChatWidget() {
             sendMessage();
           }}
         >
-          <label className="sr-only" htmlFor="shrava-chat-input">
-            Ask Shrava a question
+          <label className="sr-only" htmlFor="Shravo-chat-input">
+            Ask Shravo a question
           </label>
-          <textarea
-            id="shrava-chat-input"
-            placeholder="How can we help you today?"
-            value={input}
-            rows={2}
-            onChange={(event) => setInput(event.target.value)}
-            onKeyDown={(event) => {
-              if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
-                event.preventDefault();
-                sendMessage();
-              }
-            }}
-          />
-          <button type="submit" className="chat-send" disabled={!canSend}>
-            {isSending ? 'Sending…' : 'Send'}
-          </button>
+          <div className="chat-form">
+            <textarea
+              id="Shravo-chat-input"
+              placeholder="How can we help you today?"
+              value={input}
+              rows={2}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' && !event.shiftKey) {
+                  event.preventDefault();
+                  sendMessage();
+                }
+              }}
+            />
+          </div>
+            <button type="submit" className="chat-send" disabled={!canSend}>
+              {isSending ? 'Sending…' : 'SEND'}
+            </button>
         </form>
       </div>
     </div>

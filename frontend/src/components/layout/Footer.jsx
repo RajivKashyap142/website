@@ -4,13 +4,13 @@ export default function Footer({ footerColumns, policyLinks }) {
       <div className="container footer-grid">
         <div>
           <div className="branding">
-            <img src="/shrava-logo.svg" alt="Shrava" className="logo-mark" />
+            <img src="/Shravo-logo.png" alt="Shravo" className="logo-mark" />
             <div className="brand-copy">
-              <span className="logo-word">Shrava</span>
-              <span className="logo-tagline">Voice Automation Intelligence Services</span>
+              <span className="logo-word">Shravo</span>
+              <span className="logo-tagline">Listening Beyond Words,Understanding Beyond Limits Services</span>
             </div>
           </div>
-          <p className="footer-tagline">Shrava · Voice Automation Intelligence Platform</p>
+          <p className="footer-tagline">Shravo · Listening Beyond Words,Understanding Beyond Limits Platform</p>
           <p className="footer-copy">CPaaS + CCaaS + AI Voice Automation engineered for autonomous operations.</p>
         </div>
         {footerColumns.map((column) => (
@@ -28,7 +28,7 @@ export default function Footer({ footerColumns, policyLinks }) {
       </div>
       <div className="container footer-bottom">
         <span>
-          © <span>{new Date().getFullYear()}</span> Shrava. All rights reserved.
+          © <span>{new Date().getFullYear()}</span> Shravo. All rights reserved.
         </span>
         <div className="policy-links">
           {policyLinks.map((link) => (

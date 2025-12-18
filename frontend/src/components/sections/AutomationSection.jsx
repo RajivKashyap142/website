@@ -8,7 +8,7 @@ export default function AutomationSection({ features, nodes }) {
           <SectionHeader
             eyebrow="Autonomous Operations"
             title="The platform that runs itself"
-            description="Shrava scales automatically, restarts services, optimises traffic, alerts anomalies, generates reports, and self-heals failures. Leadership only watches."
+            description="Shravo scales automatically, restarts services, optimises traffic, alerts anomalies, generates reports, and self-heals failures. Leadership only watches."
             align="left"
           />
           <ul className="feature-list">

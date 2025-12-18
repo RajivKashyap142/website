@@ -7,7 +7,7 @@ export default function CapabilitiesSection({ capabilities }) {
         <SectionHeader
           eyebrow="What We Do"
           title="We don’t run calls. We run revenue engines."
-          description="Shrava builds intelligent voice infrastructure that automates conversations, scales infinitely, integrates seamlessly, and reports outcomes in real time."
+          description="Shravo builds intelligent voice infrastructure that automates conversations, scales infinitely, integrates seamlessly, and reports outcomes in real time."
         />
         <div className="capabilities-grid">
           {capabilities.map((capability) => (

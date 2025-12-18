@@ -8,7 +8,7 @@ export default function RoadmapSection({ phases, kpis, usps }) {
           <SectionHeader
             eyebrow="Industries We Power"
             title="Voice automation engineered for high-impact sectors"
-            description="Shrava runs conversations for banking, fintech, telecom, healthcare, ecommerce, logistics, government, and more—with regulatory readiness built-in."
+            description="Shravo runs conversations for banking, fintech, telecom, healthcare, ecommerce, logistics, government, and more—with regulatory readiness built-in."
             align="left"
           />
           <ol className="roadmap-list">

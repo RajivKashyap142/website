@@ -2,11 +2,11 @@ import SectionHeader from '../SectionHeader';
 
 export default function WhySection({ items }) {
   return (
-    <section id="why-shrava" className="section alt-bg">
+    <section id="why-Shravo" className="section alt-bg">
       <div className="container">
         <SectionHeader
-          eyebrow="Why Shrava"
-          title="Why enterprises choose Shrava for voice automation"
+          eyebrow="Why Shravo"
+          title="Why enterprises choose Shravo for voice automation"
           description="We combine revenue-grade dialers, AI-native conversations, autonomous operations, and leadership intelligence into one platform so you can command outcomes—not infrastructure."
         />
         <div className="why-grid">

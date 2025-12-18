@@ -7,8 +7,8 @@ export default function CredibilitySection({ logos }) {
         <div className="credibility-copy">
           <SectionHeader
             eyebrow="Trusted by leaders"
-            title="Mission-critical teams rely on Shrava for accountable voice automation"
-            description="Digital-first banks, fintech unicorns, and telecom majors deploy Shrava for conversational revenue, regulatory resilience, and 24/7 AI command operations."
+            title="Mission-critical teams rely on Shravo for accountable voice automation"
+            description="Digital-first banks, fintech unicorns, and telecom majors deploy Shravo for conversational revenue, regulatory resilience, and 24/7 AI command operations."
             align="left"
           />
         </div>
